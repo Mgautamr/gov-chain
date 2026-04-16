@@ -1,0 +1,20 @@
+{
+  "name": "gov-chain",
+  "version": "1.0.0",
+  "description": "Blockchain Governance Project",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "ethers": "^6.16.0",
+    "express": "^4.22.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^7.0.0",
+    "hardhat": "^3.3.0"
+  },
+  "type": "module"
+}

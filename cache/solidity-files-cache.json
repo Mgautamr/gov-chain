@@ -2,17 +2,17 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\acer\\Desktop\\gov-chain\\contracts\\GovChain.sol": {
-      "lastModificationDate": 1776174189357,
-      "contentHash": "4947f4fb1b13797a4e9b5b0a72730ed5",
+      "lastModificationDate": 1776346463393,
+      "contentHash": "9c2389faa13f4a2ed495b39a1c0ace12",
       "sourceName": "contracts/GovChain.sol",
       "solcConfig": {
-        "version": "0.8.20",
+        "version": "0.8.24",
         "settings": {
-          "evmVersion": "paris",
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
+          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -31,7 +31,7 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.24"
       ],
       "artifacts": [
         "GovChain"

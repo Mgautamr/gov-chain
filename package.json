@@ -1,20 +1,31 @@
 {
   "name": "gov-chain",
   "version": "1.0.0",
-  "description": "Blockchain Governance Project",
-  "main": "backend/server.js",
+  "private": true,
+  "description": "Production-ready blockchain governance and document verification platform",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
   "scripts": {
-    "start": "node backend/server.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^16.6.1",
-    "ethers": "^6.16.0",
-    "express": "^4.22.1"
+    "clean": "hardhat clean",
+    "contracts:node": "hardhat node",
+    "contracts:compile": "hardhat compile",
+    "contracts:test": "hardhat test",
+    "contracts:deploy": "hardhat run scripts/deploy.js --network localhost",
+    "backend:dev": "npm run dev --workspace backend",
+    "backend:start": "npm run start --workspace backend",
+    "frontend:dev": "npm run dev --workspace frontend",
+    "frontend:build": "npm run build --workspace frontend",
+    "frontend:preview": "npm run preview --workspace frontend",
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "dev:full": "concurrently \"npm run contracts:node\" \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "build": "npm run contracts:compile && npm run frontend:build",
+    "test": "npm run contracts:test"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^7.0.0",
-    "hardhat": "^3.3.0"
-  },
-  "type": "module"
+    "@nomicfoundation/hardhat-toolbox": "^6.1.2",
+    "concurrently": "^9.2.1",
+    "hardhat": "^2.26.3"
+  }
 }

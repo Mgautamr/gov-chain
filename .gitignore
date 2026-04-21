@@ -1,0 +1,14 @@
+node_modules/
+artifacts/
+cache/
+coverage/
+dist/
+frontend/dist/
+backend/logs/
+.env
+backend/.env
+frontend/.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

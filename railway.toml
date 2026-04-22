@@ -1,0 +1,7 @@
+[build]
+	frontend = "npm install && npm run build"
+	backend = "npm install && npm run build"
+
+[start]
+	frontend = "npm start"
+	backend = "npm start"

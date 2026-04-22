@@ -7,6 +7,7 @@ import { DocumentUploadForm } from "./components/DocumentUploadForm.jsx";
 import { DocumentsPanel } from "./components/DocumentsPanel.jsx";
 import { Sidebar } from "./components/Sidebar.jsx";
 import { Topbar } from "./components/Topbar.jsx";
+import crypto from "crypto";
 import {
   getAdminKey,
   getDocuments,

@@ -24,7 +24,7 @@ app.get("/documents", (req, res) => {
 app.post("/documents/upload", (req, res) => {
   const { fileName, data, wallet } = req.body;
 
-  const crypto = require("crypto");
+ import crypto from "crypto";
   const hash = crypto.createHash("sha256").update(data).digest("hex");
 
   const newDoc = {
